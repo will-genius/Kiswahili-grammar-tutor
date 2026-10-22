@@ -7,8 +7,9 @@ class Settings(BaseSettings):
     
     # Local SQLite fallback for zero-dependency local dev / offline edge deployment
     DATABASE_URL: str = "sqlite+aiosqlite:///./tutor_storage.db"
-
+    gemini_api_key: str | None = None
     class Config:
-        env_file = ".env"
+        env_file = ".env",
+        extra="ignore"
 
 settings = Settings()

@@ -1,3 +1,4 @@
+#NOLONGR USEFUL AFTER TESTING IS COMPLETE
 from typing import Dict, Any, List
 from pydantic import BaseModel, Field
 from app.schemas import GrammarErrorDetail, AICoreOutput, ScaffoldOutput

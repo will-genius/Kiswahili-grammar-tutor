@@ -37,7 +37,7 @@ async def handle_session_message(
         input_text = payload.text
     
 
-    # 1. AI Analysis & Orchestration 
+    #  AI Analysis & Orchestration 
     ai_output = ai_core.analyze_text(input_text)
     
     scaffold_output = pedagogical_engine.scaffold(
@@ -73,7 +73,7 @@ async def handle_session_message(
             else:
                 reply_text = f"Sahihisho ni (The correction is): '{primary_error.correction}'."
 
-    #  Process Audio Output (TTS)
+    #  Process Audio Output 
     reply_audio = None
     if payload.audio:
         # If the learner spoke, the tutor speaks back

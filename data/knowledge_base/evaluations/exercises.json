@@ -1,0 +1,749 @@
+[
+  {
+    "exercise_id": "mada_1_tathmini_1",
+    "topic_id": 1,
+    "category": "maelezo_muhimu",
+    "concept": "maana ya ufahamu",
+    "prompt": "Ufahamu ni nini?",
+    "expected_answers": [
+      "Ufahamu ni dhana inayolenga kujua na kulielewa jambo kwa usahihi ili kuweza kulieleza upya bila kupotosha maana yake ya awali[cite: 44]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_2",
+    "topic_id": 1,
+    "category": "maelezo_muhimu",
+    "concept": "hatua za ufahamu",
+    "prompt": "Taja hatua zinazofuatiliwa katika kufahamu.",
+    "expected_answers": [
+      "Hatua ya kwanza ni kuelewa mambo yanayosemwa na mtu mwingine[cite: 44]. Hatua ya pili ni kuweza kupata ukweli wa yale yanayosemwa na kuyakubali au kuyakana[cite: 45]. Hatua ya tatu ni kujenga uhusiano na uelewano kati ya hao wawili wanaozungumza[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_3",
+    "topic_id": 1,
+    "category": "maelezo_muhimu",
+    "concept": "umuhimu wa ufahamu",
+    "prompt": "Ufahamu una umuhimu gani?",
+    "expected_answers": [
+      "Ufahamu una umuhimu mkubwa kwa kuwa ni fursa njema ya kupanua msamiati[cite: 45]. Kutokana na kuwa mwandishi au msemaji hutumia hasa maneno na misemo mbalimbali ambayo hutuongezea ujuzi wa lugha[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_4",
+    "topic_id": 1,
+    "category": "maelezo_muhimu",
+    "concept": "maana ya ufupisho",
+    "prompt": "Ufupisho ni nini?",
+    "expected_answers": [
+      "Ufupisho ni taaluma ya kufanya muhtasari wa habari iliyoandikwa au iliyosimuliwa bila kupotosha wazo au mawazo ya awali ya msemaji au mwandishi[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_5",
+    "topic_id": 1,
+    "category": "maelezo_muhimu",
+    "concept": "uhusiano wa ufahamu na ufupisho",
+    "prompt": "Eleza uhusiano uliopo kati ya ufupisho na ufahamu.",
+    "expected_answers": [
+      "Ufupisho hutegemea sana mbinu za ufahamu kwa sababu unafupisha yale unayoelewa yaani kufahamu[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_6",
+    "topic_id": 1,
+    "category": "sarufi",
+    "concept": "maana ya uambishaji",
+    "prompt": "Uambishaji ni nini?",
+    "expected_answers": [
+      "Uambishaji ni uzalishaji wa maneno mapya kutoka maneno mengine[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_7",
+    "topic_id": 1,
+    "category": "sarufi",
+    "concept": "kuunda vitenzi",
+    "prompt": "Toa mifano ya vitenzi vinavyotokana na maneno haya: Imara, Tata, Erevu, Adhabu, Karibu.",
+    "expected_answers": [
+      "Imara: kuimarika[cite: 45].",
+      "Tata: kutatanisha[cite: 45].",
+      "Erevu: kuerevuka[cite: 45].",
+      "Adhabu: kuadhibu[cite: 45].",
+      "Karibu: kukaribisha[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_tathmini_8",
+    "topic_id": 1,
+    "category": "sarufi",
+    "concept": "ngeli ya udogo na ukubwa",
+    "prompt": "Andika udogo na ukubwa wa majina haya: Mbwa, Wanawake, Kiti, Nyoka, Ng'ombe.",
+    "expected_answers": [
+      "Mbwa: Udogo ni Kijibwa, Ukubwa ni Jibwa[cite: 45].",
+      "Wanawake: Udogo ni Vijanavijike, Ukubwa ni Majanamajike[cite: 45].",
+      "Kiti: Udogo ni kijiti, Ukubwa ni Majiti[cite: 45].",
+      "Nyoka: Udogo ni Kijoka, Ukubwa ni joka[cite: 45].",
+      "Ng'ombe: Udogo ni Kigombe, Ukubwa ni Gombe[cite: 45]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_ziada_1",
+    "topic_id": 1,
+    "category": "sarufi",
+    "concept": "kuunda majina",
+    "prompt": "Unda majina kutoka maneno yafuatayo: Kufa, Kuja, Kulia, embamba, eusi, sawa.",
+    "expected_answers": [
+      "Kufa: kifo, mfu[cite: 45, 46].",
+      "Kuja: ujio, majilio[cite: 45, 46].",
+      "Kulia: kilio, mlio[cite: 45, 46].",
+      "embamba: wembamba[cite: 45, 46].",
+      "eusi: Mweusi[cite: 46].",
+      "sawa: usawa[cite: 46]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_ziada_2",
+    "topic_id": 1,
+    "category": "sarufi",
+    "concept": "kudunisha majina",
+    "prompt": "Dunisha majina yafuatayo: Mwiko, Jiko, Mti, Kiti, Cherehani.",
+    "expected_answers": [
+      "Mwiko: kijiko[cite: 46].",
+      "Jiko: Kijijiko[cite: 46].",
+      "Mti: kijiti[cite: 46].",
+      "Kiti: kijijiti[cite: 46].",
+      "Cherehani: kijerehani[cite: 46]."
+    ]
+  },
+  {
+    "exercise_id": "mada_1_ziada_3",
+    "topic_id": 1,
+    "category": "sarufi",
+    "concept": "kauli za vitenzi",
+    "prompt": "Toa kauli ya kutendea, kutendesha, kutendana, kutendwa, na kutendewa kwa vitenzi vifuatavyo: Kufunda, Kuua, Kuoa, Kunyoa, Kuuma.",
+    "expected_answers": [
+      "Kufunda: kufundia, kufunza, kufundana, kufundwa, kufundiwa[cite: 46].",
+      "Kuua: kuulia, kuulisha, kuuana, kuuawa, kuuliwa[cite: 46].",
+      "Kuoa: kuolea, kuoza, kuoana, kuolewa, kuolewa[cite: 46].",
+      "Kunyoa: kunyolea, Kunyoza/kunyolesha, kunyoana, kunyolewa, kunyolewa[cite: 46].",
+      "Kuuma: kuumia, Kuumiza, kuumana, kuumwa, kuumiwa[cite: 46]."
+    ]
+  },
+  {
+    "exercise_id": "mada_2_tathmini_1",
+    "topic_id": 2,
+    "category": "maelezo_muhimu",
+    "concept": "maana ya barua rasmi",
+    "prompt": "Barua rasmi ni nini?",
+    "expected_answers": [
+      "Barua rasmi ni barua zihusuzo kazi na shughuli za kiofisi. Hapa huingia barua za kuomba kazi, kutoa ripoti ya kikazi, shughuli za serikali, kichama na kidini[cite: 63]."
+    ]
+  },
+  {
+    "exercise_id": "mada_2_tathmini_2",
+    "topic_id": 2,
+    "category": "maelezo_muhimu",
+    "concept": "sehemu za barua rasmi",
+    "prompt": "Taja sehemu kuu muhimu za barua rasmi.",
+    "expected_answers": [
+      "i) Anwani ya anayeandika ii) Tarehe iii) Anwani ya anayeandikiwa iv) Kichwa cha barua v) Barua yenyewe vi) Hitimisho / mwisho wa barua vii) Sahihi na jina la mwandikaji[cite: 63]."
+    ]
+  },
+  {
+    "exercise_id": "mada_2_ziada_1",
+    "topic_id": 2,
+    "category": "maelezo_muhimu",
+    "concept": "madhumuni ya barua rasmi",
+    "prompt": "Barua rasmi huandikwa kwa minajili ipi?",
+    "expected_answers": [
+      "Barua rasmi huandikwa kwa sababu mbalimbali k.v. kuomba kazi, kuomba nafasi katika shule au kumwandikia mkuu anayeshika wadhifa fulani[cite: 63]."
+    ]
+  },
+  {
+    "exercise_id": "mada_2_ziada_2",
+    "topic_id": 2,
+    "category": "sarufi",
+    "concept": "kukanusha kiambishi rejeshi -po-",
+    "prompt": "Kanusha sentensi zifuatazo: i) Utakaponitembelea nitafurahi. ii) Tutakapopata pesa za nauli tutamtembelea mtoto wetu. iii) Ukisoma kwa bidii utafalu. iv) Ukizingatia sehemu muhimu za barua rasmi utaiandika vizuri.",
+    "expected_answers": [
+      "i) Usiponitembelea sitafurahi[cite: 64].",
+      "ii) Tusipopata pesa za nauli hatutamtembelea mtoto wetu[cite: 64].",
+      "iii) Usiposoma kwa bidii hutafaulu[cite: 64].",
+      "iv) Usipozingatia sehemu muhimu za barua rasmi hutaiandika vizuri[cite: 64]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_tathmini_1",
+    "topic_id": 3,
+    "category": "maelezo_muhimu",
+    "concept": "sehemu za insha",
+    "prompt": "Taja sehemu kuu za insha.",
+    "expected_answers": [
+      "Sehemu kuu za insha ni utangulizi, insha yenyewe na hitimisho[cite: 86]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_tathmini_2",
+    "topic_id": 3,
+    "category": "maelezo_muhimu",
+    "concept": "aina za insha",
+    "prompt": "Taja aina za insha katika utungaji.",
+    "expected_answers": [
+      "Katika utungaji wa insha kuna insha za wasifu, insha za picha, insha za mdokezo, insha za maelezo, insha za masimulizi, insha za methali, insha za hoja na insha za kubuni[cite: 86]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_tathmini_3",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "mnyumbuliko na mnyambuliko",
+    "prompt": "Eleza tofauti kati ya kunyumbua (mnyumbuliko) na mnyambuliko.",
+    "expected_answers": [
+      "Kunyumbua ni kurefusha neno kwa kuongeza viambishi tamati nyuma ya mzizi au shina lakini mnyambuliko ni mbinu ya kutia viambishi awali na viambishi tamati mbele na nyuma ya mizizi au mashina na kupata maneno mapya[cite: 86]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_tathmini_4",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "alama za vituo",
+    "prompt": "Taja majina na matumizi ya alama za vituo zifuatazo: !, ..., /",
+    "expected_answers": [
+      "!: Alama ya kushangaa: hutumiwa baada ya vihisishi[cite: 86].",
+      "...: alama za nukuu: huonyesha kuwa maneno yaliyokuwa yakisemwa yanaendelea[cite: 86].",
+      "/: mkwaju: hutumiwa kwa kuandika tarehe[cite: 86]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_tathmini_5",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "kuunda vitenzi",
+    "prompt": "Unda vitenzi kutoka maneno au sehemu za maneno yafuatayo: nono, Neno, -kali, sawa, Jitihada.",
+    "expected_answers": [
+      "nono: kunona[cite: 86].",
+      "Neno: kunena[cite: 86].",
+      "-kali: kukaza[cite: 86].",
+      "sawa: kusawazisha[cite: 86].",
+      "Jitihada: kujitahidi[cite: 86]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_tathmini_6",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "kauli za vitenzi",
+    "prompt": "Toa kauli ya kutendea, kutendwa, kutendesha, kutendana, na kutendeka kwa vitenzi vifuatavyo: vaa, la, leta, vua, lala, oa.",
+    "expected_answers": [
+      "vaa: valia, vishwa, visha, vika[cite: 87].",
+      "la: lia, liwa, lisha, lika[cite: 87].",
+      "leta: letea, letwa, letesha, letana, leteka[cite: 87].",
+      "vua: vulia, vuliwa, vulisha, vulika[cite: 87].",
+      "lala: lalia, laza, lalana, lalika[cite: 87].",
+      "oa: olea, olewa, oza, oana, oleka[cite: 87]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_ziada_1",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "uakifishaji",
+    "prompt": "Afikisha sentensi zifuatazo: i) jina lako ni nani mwalimu wa kiswahili aliniuliza ii) njoo hapa iii) leo ni tarehe 1362019 iv) tulinunua viazi vitunguu maharagwe mahindi na ndizi",
+    "expected_answers": [
+      "i) « Jina lako ni nani? » Mwalimu wa Kiswahili aliniuliza[cite: 87].",
+      "ii) Njoo hapa![cite: 87]",
+      "iii) Leo ni tarehe 13/6/2019[cite: 87].",
+      "iv) Tulinunua viazi, vitunguu, maharagwe, mahindi na ndizi[cite: 87]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_ziada_2",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "mnyumbuliko",
+    "prompt": "Nyumbua vitenzi vifuatavyo: Kuja, Kufa, Kupenda, Kucheza, Kunyoa.",
+    "expected_answers": [
+      "Kuja: kujiwa[cite: 87, 88].",
+      "Kufa: kufiwa[cite: 87, 88].",
+      "Kupenda: kupendeza[cite: 87, 88].",
+      "Kucheza: kuchezesha[cite: 87, 88].",
+      "Kunyoa: kunyolewa[cite: 87, 88]."
+    ]
+  },
+  {
+    "exercise_id": "mada_3_ziada_3",
+    "topic_id": 3,
+    "category": "sarufi",
+    "concept": "kuunda vitenzi",
+    "prompt": "Unda vitenzi kutoka maneno yafuatayo: Idhini, Ruhusa, Fedheha, Haya, -kali.",
+    "expected_answers": [
+      "Idhini: kuidhinisha[cite: 88].",
+      "Ruhusa: kuruhusiwa[cite: 88].",
+      "Fedheha: kufedhehesha[cite: 88].",
+      "Haya: kutahayari[cite: 88].",
+      "-kali: kukaza[cite: 88]."
+    ]
+  },
+  {
+    "exercise_id": "mada_4_tathmini_1",
+    "topic_id": 4,
+    "category": "maelezo_muhimu",
+    "concept": "maana na madhumuni ya hotuba",
+    "prompt": "Hotuba ni nini na hutolewa kwa madhumuni gani?",
+    "expected_answers": [
+      "Hotuba ni maelezo maalumu yanayotolewa na mtu mmoja mbele ya kundi la watu[cite: 103].",
+      "Hotuba inaweza kutolewa kwa madhumuni ya kutaka kuhimiza kazi, kufanya kampeni fulani au kutoa taarifa fulani kwa watu[cite: 103]."
+    ]
+  },
+  {
+    "exercise_id": "mada_4_tathmini_2",
+    "topic_id": 4,
+    "category": "maelezo_muhimu",
+    "concept": "ufupisho wa hotuba",
+    "prompt": "Taja hatua za kuzingatia wakati wa kufupisha hotuba.",
+    "expected_answers": [
+      "Soma taarifa uliyopewa kwa mfululizo kuanzia mwanzo hadi mwisho[cite: 103].",
+      "Soma taarifa hiyo kwa mara yapili huku ukidondoa hoja muhimu na kuziandika[cite: 103].",
+      "Chunguza kuwa kuna hoja ambazo zilisahaulika katika usemi asilia[cite: 103].",
+      "Unganisha hoja zako kwa kutumia viunganishi mwafaka pale panapostahili[cite: 103].",
+      "Soma hoja ulizoziunganisha kuhakikisha kwamba zina mtiririko mzuri[cite: 103].",
+      "Hariri makala yako ili kuondoa makosa ya kisarufi[cite: 103].",
+      "Zingatia idadi ya maneno yanayostahili[cite: 103]."
+    ]
+  },
+  {
+    "exercise_id": "mada_4_tathmini_3",
+    "topic_id": 4,
+    "category": "maelezo_muhimu",
+    "concept": "sifa za hotuba",
+    "prompt": "Eleza mambo ya kuzingatia katika hotuba.",
+    "expected_answers": [
+      "Ukweli wa habari na taarifa: Ni lazima mhutubi ahakikishe kuwa yale anayozungumzia yana uhusiano na ukweli[cite: 103].",
+      "Ufasaha wa lugha: lazima mhutubi kutumia lugha fasaha, nzuri, safi na yenye kusikika vizuri kwa kila msikilizaji[cite: 103].",
+      "Mantiki nzuri: Ni lazima kuweko mfuatano mzuri wa mawazo au fikra[cite: 103].",
+      "Nidhamu: Yaani adabu njema ya mzungumzaji mwenyewe asimamapo mbele ya watu[cite: 103].",
+      "Sauti ya kusikia wazi pamoja na ishara zinazoeleweka na zinazohusiana na yasemwayo[cite: 103]."
+    ]
+  },
+  {
+    "exercise_id": "mada_4_ziada_1",
+    "topic_id": 4,
+    "category": "sarufi",
+    "concept": "usemi wa asili na usemi wa taarifa",
+    "prompt": "Weka sentensi zifuatazo katika usemi wa asili au usemi wa taarifa: i) 'Nitatunga hotuba ya kuvutia wasikilizaji,' Mutesi alisema. ii) 'Ukisoma kwa bidii, utafua dafu' mzazi alimshauri mwanawe. iii) Mwanafunzi alisema kuwa kitabu chake kilikuwa kipya. iv) Wasafiri walisema kuwa siku iliyopita walinyeshewa sana. v) 'Kwa nini ulichelewa?' mwalimu alimwuliza mwanafunzi.",
+    "expected_answers": [
+      "i) Mutesi alisema kuwa angetunga hotuba ya kuvutia wasikilizaji[cite: 104].",
+      "ii) Mzazi alimshauri mwanawe kuwa iwapo angesoma kwa bidii angefua dafu[cite: 104].",
+      "iii) 'Kitabu changu ni kipya,' mwanafunzi alisema[cite: 104].",
+      "iv) 'Tulinyeshewa sana jana,' wasafiri walisema[cite: 104].",
+      "v) Mwalimu alitaka kujua sababu ya kuchelewa kwa mwanafunzi[cite: 104]."
+    ]
+  },
+  {
+    "exercise_id": "mada_4_ziada_2",
+    "topic_id": 4,
+    "category": "sarufi",
+    "concept": "usemi wa asili na usemi wa taarifa",
+    "prompt": "Weka sentensi hizi katika usemi wa asili au usemi wa taarifa: i) 'Lo! Kumbe ni mtoto!' Mama alishangaa. ii) Kayigi alisema kuwa angeenda shuleni siku iliyofuata. iii) 'Tutafanya mtihani wa Kiswahili leo,' mwanafunzi mmoja alisema.",
+    "expected_answers": [
+      "i) Mama alishangaa kuwa huyo alikuwa mtoto[cite: 105].",
+      "ii) 'Nitaenda shuleni kesho,' Kayigi alisema[cite: 105].",
+      "iii) Mwanafunzi mmoja alisema kuwa wangefanya mtihani wa Kiswahili siku hiyo[cite: 105]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_tathmini_1",
+    "topic_id": 5,
+    "category": "maelezo_muhimu",
+    "concept": "maana ya ripoti",
+    "prompt": "Ripoti ni nini?",
+    "expected_answers": [
+      "Ripoti ni maelezo ya kuhusu mtu, kitu au jambo fulani lililotokea[cite: 120]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_tathmini_2",
+    "topic_id": 5,
+    "category": "maelezo_muhimu",
+    "concept": "kuzingatia katika uandishi wa ripoti",
+    "prompt": "Taja mambo matatu ya kuzingatia wakati wa kuandika ripoti.",
+    "expected_answers": [
+      "a) Kusanya maelezo yote unayohitaji kuhusiana na ripoti hiyo[cite: 121].",
+      "b) Yaangalie mawazo yako ili kubainisha ni yapi ambayo yanapaswa kutangulia na yanafuatwa na yapi[cite: 121].",
+      "c) Lugha inayotumiwa katika uandishi wa ripoti lazima izingatie wasomaji wa ripoti inayohusika[cite: 121]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_tathmini_3",
+    "topic_id": 5,
+    "category": "maelezo_muhimu",
+    "concept": "sehemu za ripoti",
+    "prompt": "Taja sehemu kuu zinazounda ripoti.",
+    "expected_answers": [
+      "Ripoti huwa na kichwa, utangulizi, kiini na hitimisho[cite: 121]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_tathmini_4",
+    "topic_id": 5,
+    "category": "maelezo_muhimu",
+    "concept": "uboreshaji wa ripoti",
+    "prompt": "Uboreshaji wa ripoti hufanyika vipi?",
+    "expected_answers": [
+      "Uboreshaji wa ripoti hufanyika kwa kupunguza mambo, ukaondoa yale yasiyo muhimu sana[cite: 121]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_tathmini_5",
+    "topic_id": 5,
+    "category": "maelezo_muhimu",
+    "concept": "matumizi ya lugha",
+    "prompt": "Kwa nini mwandishi wa ripoti analazimishwa kuzingatia vizuri lugha anayotumia?",
+    "expected_answers": [
+      "Mwandishi wa ripoti analazimishwa kuzingatia vizuri lugha anayotumia kwa sababu lugha hii inapaswa kutumiwa kulingana na wasomaji wa ripoti ama kulingana na uwanja wa ripoti yenyewe[cite: 121]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_tathmini_6",
+    "topic_id": 5,
+    "category": "sarufi",
+    "concept": "vipashio katika sentensi",
+    "prompt": "Onyesha vipashio katika sentensi zifuatazo: i) Watu wanapaswa kuishi kwa usafi. ii) Yeye alitunukiwa zawadi aliposhinda. iii) Wanyarwanda wengi wanalala katika nyumba safi. iv) Mtu anayetegemea cha nduguye atakufa maskini. v) Mwalimu huyu anafundisha vizuri.",
+    "expected_answers": [
+      "i) Watu (N) wanapaswa (TS) kuishi (T) kwa (HU) usafi (N)[cite: 121].",
+      "ii) Yeye (W) alitunukiwa (T) zawadi (N) aliposhinda (T - kishazi tegemezi)[cite: 121].",
+      "iii) Wanyarwanda (N) wengi (V) wanalala (T) katika (HU) nyumba (N) safi (V)[cite: 121].",
+      "iv) Mtu (N) anayetegemea (T - Kishazi t) cha (W) nduguye (N) atakufa (T) maskini (N)[cite: 121].",
+      "v) Mwalimu (N) huyu (V) anafundisha (T) vizuri (E)[cite: 121]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_ziada_1",
+    "topic_id": 5,
+    "category": "sarufi",
+    "concept": "aina za sentensi",
+    "prompt": "Taja na utoe mifano kwa aina tano za sentensi.",
+    "expected_answers": [
+      "Sentensi sahili: Wao wanapanda miti[cite: 121].",
+      "Sentensi tegemezi: Atakapofika[cite: 121].",
+      "Sentensi changamano: Atakapofika tutaondoka[cite: 121].",
+      "Sentensi ambatano: Wao manapanda miti na wengine wanafyeka vichaka[cite: 122].",
+      "Sentensi shurutia: Mvua ikinyesha vizuri mwaka huu tutapata mavuno ya kutosha[cite: 122]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_ziada_2",
+    "topic_id": 5,
+    "category": "sarufi",
+    "concept": "tungo nyofu na tata",
+    "prompt": "Ni tofauti gani iliyoko baina ya tungo nyofu na tungo tata?",
+    "expected_answers": [
+      "Tungo nyofu ni tungo yenye maana moja tu ilhali tungo tata ni tungo yenye maana zaidi ya moja[cite: 122]."
+    ]
+  },
+  {
+    "exercise_id": "mada_5_ziada_3",
+    "topic_id": 5,
+    "category": "msamiati",
+    "concept": "maneno yenye maana zaidi ya moja",
+    "prompt": "Tunga sentensi mbili kwa kuonyesha maana tofauti za maneno yafuatayo: Fuko, Paa, Chungu, Kanga, Kiboko.",
+    "expected_answers": [
+      "Fuko: Fuko ni mnyama anayeishi ardhini. / Tia taka ndani ya fuko lile![cite: 122]",
+      "Paa: Kunguru alipaa angani. / Paa la nyumba yetu lilipeperushwa na upepo[cite: 122].",
+      "Chungu: Mama alinunua chungu cha kupikia. / Timu ya chuo chetu ilishinda chuo kingine mabao chungu nzima[cite: 122].",
+      "Kanga: Mama yule anavaa kanga nzuri. / Kanga anafanana na kuku[cite: 122].",
+      "Kiboko: Kagabo alifungwa kwa kumuua kiboko. / Mwizi yule alipigwa kiboko matako yakaenea[cite: 122]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_1",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "maana ya uhakiki",
+    "prompt": "Uhakiki ni nini?",
+    "expected_answers": [
+      "Uhakiki ni utathmini, ufasili na uanishaji wa kazi ya fasihi. Ni uchambuzi wa ndani kabisa wa kitu au jambo ulioambatana na fikra za mchambuzi[cite: 143]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_2",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "vipengele vya uhakiki",
+    "prompt": "Tunapohakiki kazi ya fasihi tunachunguza nini?",
+    "expected_answers": [
+      "Tunapohakiki kazi ya fasihi tunachunguza fani na maudhui katika kazi hiyo[cite: 143]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_3",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "tabia za wahusika",
+    "prompt": "Taja na ueleze tabia za wahusika katika kazi ya fasihi.",
+    "expected_answers": [
+      "Ubapa: tabia ya kutobadilika kwa mhusika[cite: 143].",
+      "Uduara: tabia ya kubadilika kwa mhusika[cite: 143].",
+      "Ufoili: tabia ya kutoonyesha msimamo mmoja kwa mhusika[cite: 143]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_4",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "mandhari na muktadha",
+    "prompt": "Eleza tofauti iliyopo kati ya mandhari na muktadha.",
+    "expected_answers": [
+      "Mandhali ni wakati na mahali ambamo kazi ya fasihi imefanyikia ilhali muktadha ni hali ambamo kazi ya kifasihi inafanyikia[cite: 143]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_5",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "uhakiki wa fani",
+    "prompt": "Katika uhakiki wa fani ya hadithi tunachunguza vipengele gani?",
+    "expected_answers": [
+      "Katika uhakiki wa fani ya hadithi tunachunguza wahusika, muundo, mtindo, mandhari, matumizi ya lugha[cite: 143]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_6",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "aina za hadithi",
+    "prompt": "Taja aina za hadithi za masimulizi.",
+    "expected_answers": [
+      "Ngano: Hadithi ambayo wahusika wake ni mchanganyiko wa wanyama, wadudu, mizimu, miungu, miti, watu, na viumbe visivyo na uhai[cite: 144].",
+      "Hekaya: Hadithi ambayo wahusika wake kwa kawaida ni binadamu tu[cite: 144].",
+      "Hurafa: Hadithi ambazo wahusika wake huwa ni wanyama wanaopewa tabia na vitendo vya kibinadamu[cite: 144].",
+      "Visasili: Hadithi hizi zinazohusu asili ya mambo fulani[cite: 144].",
+      "Soga: Hizi ni hadithi fupi za kuchekesha na kukejeli[cite: 144].",
+      "Visakale au Mighani: Ni hadithi ambazo wahusika wake ni watu waliotenda matendo ya kishujaa na wanaosifiwa katika jamii fulani[cite: 144]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_tathmini_7",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "matumizi ya wanyama",
+    "prompt": "Kwa nini wanyama hutumiwa kama wahusika katika hadithi badala ya watu?",
+    "expected_answers": [
+      "Tunatumia wanyama ili tusichochee ghasia katika jamii kwa kutaja majina ya watu[cite: 144]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_ziada_1",
+    "topic_id": 6,
+    "category": "maelezo_muhimu",
+    "concept": "uwakilishi wa wanyama",
+    "prompt": "Wanyama au ndege hawa wakitumiwa hadithini huwakilisha tabia gani? i) Nyani ii) Tembo iii) Chui iv) Kunguru",
+    "expected_answers": [
+      "i) Nyani: kuwa na hekima na busara[cite: 145].",
+      "ii) Tembo: kimbelembele[cite: 145].",
+      "iii) Chui: ukatili[cite: 145].",
+      "iv) Kunguru: woga[cite: 145]."
+    ]
+  },
+  {
+    "exercise_id": "mada_6_ziada_2",
+    "topic_id": 6,
+    "category": "sarufi",
+    "concept": "kihusishi na kielezi",
+    "prompt": "Kuna tofauti gani kati ya kihusishi na kielezi?",
+    "expected_answers": [
+      "Vihusishi ni maneno yanayoonyesha uhusiano baina ya watu au vitu viwili au zaidi[cite: 145].",
+      "Vielezi ni maneno yanayotoa habari zaidi kuhusu kitendo kilivyofanyika, hali, vivumishi na vielezi vingine[cite: 145]."
+    ]
+  },
+  {
+    "exercise_id": "mada_7_tathmini_1",
+    "topic_id": 7,
+    "category": "maelezo_muhimu",
+    "concept": "dhima ya fasihi andishi",
+    "prompt": "Eleza dhima za fasihi andishi katika jamii.",
+    "expected_answers": [
+      "Kuburudisha jamii[cite: 169].",
+      "Kuelimisha hadhira kuhusu jamii na mazingira[cite: 169].",
+      "Kudumisha maadili katika jamii kwa kuelekeza, kuonya na kunasihi hadhira[cite: 169].",
+      "Kuunganisha jamii pamoja[cite: 169].",
+      "Kukuza lugha na ukwasi wa lugha[cite: 170].",
+      "Kuhifadhi mila, tamaduni na itikadi za jamii[cite: 170].",
+      "Kukuza uwezo wa kufikiri kwa kuchochea hadhira kufikiri sana ili kupata suluhisho[cite: 170]."
+    ]
+  },
+  {
+    "exercise_id": "mada_7_tathmini_2",
+    "topic_id": 7,
+    "category": "maelezo_muhimu",
+    "concept": "fasihi andishi na fasihi simulizi",
+    "prompt": "Tetea kauli hii: 'Fasihi simulizi ni fasihi kongwe wakati ambapo fasihi andishi ni fasihi changa.'",
+    "expected_answers": [
+      "Fasihi simulizi ni ya kale sana kwa sababu inasemekana kuwa ilianza wakati binadamu wa kwanza alipoanza kutumia lugha kwa kutoa hoja zake[cite: 170].",
+      "Fasihi andishi ni changa kwa sababu ilianza wakati ambapo binadamu alitumia maandishi katika kuwasilisha hoja zake[cite: 170]. Mfumo wa maandishi ulianzishwa miaka mingi sana baada ya masimulizi[cite: 170]."
+    ]
+  },
+  {
+    "exercise_id": "mada_7_tathmini_3",
+    "topic_id": 7,
+    "category": "maelezo_muhimu",
+    "concept": "ushairi na ngonjera",
+    "prompt": "Kamilisha sentensi zifuatazo: i) Ushairi ni utungo wa kisanaa unaotumia... ii) Shairi lenye malumbano na majibizano kati ya watu wawili au zaidi huitwa...",
+    "expected_answers": [
+      "i) Ushairi ni utungo wa kisanaa unaotumia lugha teule na mpangilio fulani wa maneno badala ya kutumia lugha natharia[cite: 170].",
+      "ii) Shairi lenye malumbano na majibizano kati ya watu wawili au zaidi huitwa ngonjera[cite: 170]."
+    ]
+  },
+  {
+    "exercise_id": "mada_7_tathmini_4",
+    "topic_id": 7,
+    "category": "sarufi",
+    "concept": "aina za tungo",
+    "prompt": "Bainisha aina za tungo kupitia sentensi zifuatazo: a) Tutafurahi na kupiga mayowe na vigelegele. b) Walimu na wanafunzi hupaswa kushirikiana. c) Ingawa walijikinga dhidi ya mbu, watoto wa jirani yangu wameambukizwa ugonjwa wa malaria.",
+    "expected_answers": [
+      "a) Tungo ambatano[cite: 171].",
+      "b) Tungo sahili[cite: 171].",
+      "c) Tungo changamano[cite: 171]."
+    ]
+  },
+  {
+    "exercise_id": "mada_7_ziada_1",
+    "topic_id": 7,
+    "category": "maelezo_muhimu",
+    "concept": "maana ya tanzu",
+    "prompt": "Eleza maana ya tanzu zifuatazo: i) Riwaya ii) Tamthilia iii) Hadithi fupi iv) Tenzi.",
+    "expected_answers": [
+      "i) Riwaya ni kazi ya fasihi andishi ambayo huwa ndefu na aghalabu riwaya moja hujaza kitabu kizima. Riwaya huwa na wahusika wengi na huangazia mawazo kadhaa[cite: 171].",
+      "ii) Tamthilia ni mchezo wa kuigiza ulioandikwa ili uigizwe jukwaani kwa kuwasilisha ujumbe kwa jamii[cite: 172].",
+      "iii) Hadithi fupi ni aina ya kazi andishi ambayo huwa fupi; na huangazia wazo moja kwa kurejelea kisa kimoja[cite: 172].",
+      "iv) Tenzi ni aina ya shairi ambayo ni mtungo mrefu wa kishairi unaoelezea masuala mbalimbali kishairi. Utenzi huwa hauna vina vya kati katika mistari yake[cite: 172]."
+    ]
+  },
+  {
+    "exercise_id": "mada_7_ziada_2",
+    "topic_id": 7,
+    "category": "sarufi",
+    "concept": "vishazi",
+    "prompt": "Kamilisha vishazi vya sentensi hizi: a) Ingawa walitumia chandarua... b) Aliye kando... c) ...atapewa zawadi nzuri. d) ...hawataambukizwa magonjwa ya zinaa.",
+    "expected_answers": [
+      "a) Ingawa walitumia chandarua Waliumwa malaria[cite: 172].",
+      "b) Aliye kando haangukiwi na mti[cite: 172].",
+      "c) Atakayeshinda mtihani wangu vizuri atapewa zawadi nzuri[cite: 172].",
+      "d) Vijana ambao hawajiingizi katika mambo ya uasherati hawataambukizwa magonjwa ya zinaa[cite: 172]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_tathmini_1",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "dhima za uhakiki",
+    "prompt": "Taja dhima za uhakiki wa kazi za fasihi andishi.",
+    "expected_answers": [
+      "Husaidia wasomaji kuilewa kazi ya fasihi kwa urahisi kwa kuvifafanua kwa lugha rahisi[cite: 209].",
+      "Husaidia ukuaji wa kazi za fasihi kwa kuonyesha ubora na udhaifu[cite: 209].",
+      "Hukuza uelewa wa mhakiki kwa kujiongezea maarifa ya lugha pamoja na mambo yanayotokea katika jamii[cite: 209]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_tathmini_2",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "majukumu ya mhakiki",
+    "prompt": "Eleza majukumu ya Mhakiki wa Kazi za Kifasihi.",
+    "expected_answers": [
+      "Mhakiki ni mtaalamu wa kutathmini, kueleza, kuainisha na kutoa maoni juu ya kazi fulani ya fasihi kwa kuongozwa na kaida maalum[cite: 210].",
+      "Ndiye anayefafanua kazi ya fasihi ili hadhira iweze kuielewa vizuri, hivyo kurahisisha mawasiliano kati ya hadhira na mtunzi[cite: 210].",
+      "Huwaonyesha watunzi ubora na udhaifu wa kazi zao ili kuwawezesha kufanya kazi bora zaidi[cite: 210]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_tathmini_3",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "uhakiki wa kifani",
+    "prompt": "Taja mambo ya kuzingatia katika uhakiki wa kifani wa riwaya au hadithi fupi.",
+    "expected_answers": [
+      "Wahusika, Muundo, Lugha, Mtindo, Mandhari[cite: 210]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_tathmini_4",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "uhakiki wa kimaudhui",
+    "prompt": "Uhakiki wa kimaudhui katika riwaya, hadithi fupi pamoja na tamthilia huzingatia mambo yapi?",
+    "expected_answers": [
+      "Dhamira, Ujumbe, Migogoro, Falsafa, Msimamo wa msanii, Kufaulu na kutofaulu kwa msanii[cite: 210]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_tathmini_5",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "uhakiki wa shairi",
+    "prompt": "Taja mambo muhimu ya kuzingatia katika uhakiki wa umbo la shairi.",
+    "expected_answers": [
+      "Idadi ya mishororo katika kila ubeti[cite: 210].",
+      "Idadi ya mizani katika kila mshororo na katika kila kipande cha mshororo[cite: 210].",
+      "Idadi ya vipande katika kila mshororo[cite: 210].",
+      "Kituo, kiishio au kibwagizo[cite: 210].",
+      "Vina[cite: 210].",
+      "Matumizi ya lugha[cite: 210]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_ziada_1",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "kuainisha fani na maudhui",
+    "prompt": "Panga vipengele hivi vya uhakiki kulingana na fani na maudhui: Mandhari, Ujumbe, Matumizi ya lugha, Migogoro, Falsafa, Muundo, Wahusika, Msimamo wa msanii, Mtindo, Kufaulu na kutofaulu kwa msanii, Dhamira.",
+    "expected_answers": [
+      "Vipengele vya fani: Mandhari, Matumizi ya lugha, Wahusika, Mtindo, Muundo[cite: 217].",
+      "Vipengele vya maudhui: Ujumbe, Migogoro, Falsafa, Msimamo wa msanii, Dhamira, Kufaulu na kutofaulu kwa msanii[cite: 217]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_ziada_2",
+    "topic_id": 8,
+    "category": "maelezo_muhimu",
+    "concept": "dhana za kifasihi",
+    "prompt": "Jaza nafasi wazi: i) Mhakiki ni ... ii) Mhusika mkuu katika tamthilia ya tanzia anaweza kuishia... iii) Kuna aina mbili za jukwaa ambazo ni ... iv) Baadhi ya tamathali za semi kuna ... v) Katika tamthilia, wahusika huwa natabia za aina tatu ambazo ni...",
+    "expected_answers": [
+      "i) Mtaalamu wa kifasihi anayeshughulikia uhakiki wa kazi za fasihi[cite: 218].",
+      "ii) Kwa kifo au kushindwa katika juhudi anazowania[cite: 218].",
+      "iii) Jukwaa halisi na jukwaa la akilini[cite: 218].",
+      "iv) Tashbiha, tashihisi, takiriri, sitiari, taswira, n.k.[cite: 218]",
+      "v) Ubapa, usugu (uduara), ufoili[cite: 218]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_ziada_3",
+    "topic_id": 8,
+    "category": "msamiati",
+    "concept": "tamathali za semi na nahau",
+    "prompt": "Bainisha palipotumiwa tamathali sa semi, methali au nahau katika sentensi zifuatazo: a) Msichana mrembo sawa na malkia. b) Maisha ni mlima. c) Kufa macho kuliko kufa moyo. d) Kuonea wivu. e) Siku moja, gari lake lilimwambia asiliendeshe kwa sababu alikuwa amevaa miwani.",
+    "expected_answers": [
+      "a) Tashibiha[cite: 218].",
+      "b) Sitiari[cite: 218].",
+      "c) Methali[cite: 218].",
+      "d) Nahau[cite: 218].",
+      "e) Tashihisi (gari lake lilimwambia) na Nahau (kuvaa miwani)[cite: 218]."
+    ]
+  },
+  {
+    "exercise_id": "mada_8_ziada_4",
+    "topic_id": 8,
+    "category": "sarufi",
+    "concept": "viambishi rejeshi",
+    "prompt": "Chagua jibu sahihi: a) Mbwa (ndizo, ndiyo, ndio) hulinda nyumba. b) Kurasa (ambazo, iliyo, zilizo) sahihishwa ni ngapi? c) Kuku wataka(zo, o, zo)chinjwa wamenunuliwa. d) Chumbani mna(mo, ko, po)lala ndi(mo, ko, po) mna(mo, ko, po)peleka vifaa vyenu. e) Mahali tutaka(mo, po, ko)tembelea ndi(mo, po, ko) pataka(mo, po, ko)tutolea picha.",
+    "expected_answers": [
+      "a) Mbwa ndio hulinda nyumba[cite: 219].",
+      "b) Kurasa zilizosahihishwa ni ngapi?[cite: 219]",
+      "c) Kuku watakaochinjwa kwenye sikukuu wamenunuliwa[cite: 219].",
+      "d) Chumbani mnamolala ndimo mnamopeleka vifaa vyenu[cite: 219].",
+      "e) Mahali tutakapotembelea ndipo patakapotutolea picha ya maendeleo ya shughuli za kiutalii nchini mwetu[cite: 219]."
+    ]
+  }
+
+]

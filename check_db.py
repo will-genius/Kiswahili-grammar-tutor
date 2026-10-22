@@ -1,3 +1,4 @@
+#IMPLE CHECK TO CONRM IF DB IS WORKING
 import sqlite3
 import pandas as pd
 

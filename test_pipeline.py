@@ -1,3 +1,4 @@
+# TESTING IF WHISPER IS FUNCIONING 
 import requests
 import base64
 import numpy as np

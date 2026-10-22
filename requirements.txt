@@ -14,3 +14,4 @@ pydantic-settings>=2.1.0
 faster-whisper
 psutil
 streamlit audio-recorder-streamlit requests
+google-genai
