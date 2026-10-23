@@ -1,15 +1,20 @@
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
+import os
 import logging
 import torch
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_chroma import Chroma
+
 # Optimize PyTorch CPU threading for low-spec edge devices
 torch.set_num_threads(4) 
 torch.set_num_interop_threads(1)
 
 logger = logging.getLogger(__name__)
 
-# Connect to the existing offline vector store
-embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-m3")
+# INSTANT STARTUP: Use Google Gemini embeddings instead of downloading BAAI/bge-m3 locally
+embeddings = GoogleGenerativeAIEmbeddings(
+    model="models/embedding-001",
+    google_api_key=os.getenv("GEMINI_API_KEY")
+)
 
 vector_store = Chroma(
     collection_name="swahili_grammar_kb",
