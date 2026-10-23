@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 # INSTANT STARTUP: Use Google Gemini embeddings instead of downloading BAAI/bge-m3 locally
 # Updated model name for Google Gemini embeddings
 embeddings = GoogleGenerativeAIEmbeddings(
-    model="models/text-embedding-004",
+    model="text-embedding-004",
     google_api_key=os.getenv("GEMINI_API_KEY")
 )
 vector_store = Chroma(
