@@ -24,26 +24,26 @@ docker compose up --build
 
 ## Access the application in your browser:
 
-Streamlit Frontend UI: http://localhost:8501
+* **Streamlit Frontend UI**: http://localhost:8501
 
-FastAPI Backend Docs: http://localhost:8000/docs
+* **FastAPI Backend Docs**: http://localhost:8000/docs
 
 ## Example Usage
 To demonstrate the bot, you can test these sample prompts or workflows:
 
-Text Query (English):
+* **Text Query (English)**:
 
-Sample Input: "Can you explain the key pillars of the CBC curriculum?"
+* **Sample Input**: "Can you explain the key pillars of the CBC curriculum?"
 
-Expected Output: A structured response grounded in retrieved curriculum documents with source expanders.
+* **Expected Output**: A structured response grounded in retrieved curriculum documents with source expanders.
 
-Text Query (Kiswahili):
+* **Text Query (Kiswahili)**:
 
-Sample Input: "Nieleze kuhusu misingi ya mtaala wa umahiri."
+* **Sample Input**: "Nieleze kuhusu misingi ya mtaala wa umahiri."
 
-Expected Output: Fluent educational guidance in Swahili.
+* **Expected Output**: Fluent educational guidance in Swahili.
 
-Voice Input Flow:
+* **Voice Input Flow**:
 
 Select "Ongea na Sauti (Voice)" from the sidebar.
 
