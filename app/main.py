@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request,UploadFile, File
 from contextlib import asynccontextmanager
 from app.config import settings
 from app.database import init_db
@@ -6,6 +6,7 @@ import app.models
 from app.session import router as session_router
 import os
 from pydantic import BaseModel
+import shutil
 from app.evaluation_service import ExerciseEvaluator
 from app.rag_service import query_knowledge_base 
 from app.tutor_service import TutorService
@@ -62,6 +63,40 @@ async def handle_student_chat(payload: ChatMessageRequest):
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+tutor = TutorService()
+@app.post("/api/chat/voice")
+async def chat_with_voice(file: UploadFile = File(...)):
+    """
+    Receives voice recording bytes, transcribes via Groq Whisper, 
+    queries the RAG tutor, and returns both text and transcription.
+    """
+    temp_audio_path = f"temp_{file.filename or 'input.wav'}"
+    
+    try:
+        # Save uploaded audio stream temporarily
+        with open(temp_audio_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+            
+        # Transcribe audio to text using Groq Whisper
+        transcribed_text = tutor.transcribe_audio(temp_audio_path)
+        
+        if not transcribed_text or "Error" in transcribed_text:
+            return {"status": "error", "message": "Failed to transcribe audio."}
+            
+        # Pass transcribed text into your RAG tutor logic
+        response_data = tutor.generate_response(transcribed_text)
+        
+        return {
+            "status": "success",
+            "transcribed_query": transcribed_text,
+            "tutor_response": response_data["tutor_response"]
+        }
+        
+    finally:
+        # Clean up temporary audio file
+        if os.path.exists(temp_audio_path):
+            os.remove(temp_audio_path)
 
 #  Add the evaluation endpoint
 @app.post("/api/evaluate")

@@ -16,5 +16,5 @@ psutil
 streamlit
 audio-recorder-streamlit
 requests
-google-genai
-langchain-google-genai
+groq
+
