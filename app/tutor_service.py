@@ -32,8 +32,18 @@ class TutorService:
                 "prompt_sent_to_llm": ""
             }
 
-        # 1. Retrieve the top 2 precise micro-chunks 
+        # Retrieve the top 2 precise micro-chunks 
         retrieved_docs = query_knowledge_base(student_message, k=2)
+        
+        # --- STRICT KB GUARDRAIL ---
+        if not retrieved_docs or len(retrieved_docs) == 0:
+            return {
+                "status": "success",
+                "student_message": student_message,
+                "tutor_response": "Samahani, sikupata taarifa hii kwenye nyaraka za mtaala. Tafadhali uliza swali linalohusu mtaala. / I couldn't find this information in the curriculum documents. Please ask a question related to the curriculum.",
+                "prompt_sent_to_llm": "",
+                "retrieved_context_used": []
+            }
         
         # Extract and concatenate the text content from the retrieved chunks
         context_text = "\n\n".join([doc["content"] for doc in retrieved_docs])
@@ -66,8 +76,10 @@ Student Message: {student_message}
             "status": "success",
             "student_message": student_message,
             "tutor_response": tutor_reply,
-            "prompt_sent_to_llm": system_prompt
+            "prompt_sent_to_llm": system_prompt,
+            "retrieved_context_used": retrieved_docs # Included so the UI can render the source cards!
         }
+
     def generate_response_stream(self, student_message: str, preferred_language: str = "auto"):
         """
         Streams the Groq API response token-by-token for lightning-fast UI rendering.
@@ -78,9 +90,15 @@ Student Message: {student_message}
 
         # Retrieve the top 2 precise micro-chunks 
         retrieved_docs = query_knowledge_base(student_message, k=2)
+        
+        # --- STRICT KB GUARDRAIL FOR STREAMING ---
+        if not retrieved_docs or len(retrieved_docs) == 0:
+            yield "Samahani, sikupata taarifa hii kwenye nyaraka za mtaala. / I couldn't find this information in the curriculum documents."
+            return
+
         context_text = "\n\n".join([doc["content"] for doc in retrieved_docs])
         
-        #  Construct the bilingual pedagogical system prompt
+        # Construct the bilingual pedagogical system prompt
         system_prompt = f"""You are an encouraging and supportive bilingual educational tutor (English and Kiswahili) for students using low-spec edge devices. 
 Your task is to answer the student's question or explain the concept using ONLY the provided curriculum context below. 
 
@@ -92,7 +110,7 @@ Curriculum Context (Retrieved Knowledge):
 Student Message: {student_message}
 """
 
-        #  Stream response chunks via Groq API
+        # Stream response chunks via Groq API
         try:
             stream = self.client.chat.completions.create(
                 model=self.model_name,
@@ -119,7 +137,7 @@ Student Message: {student_message}
                 transcription = self.client.audio.transcriptions.create(
                     file=(audio_file_path, file.read()),
                     model="whisper-large-v3-turbo",
-                    prompt="Swahili and English educational context" # Guides whisper for bilingual code-switching
+                    prompt="Huu ni mfumo wa elimu wa Kenya. Maswali yanahusu ufahamu, ufupisho, hotuba,uandishi wa barua,insha,ripoti,fasisihi simulizina fasihi andishi na masomo ya Kiswahili na Kiingereza."
                 )
             return transcription.text
         except Exception as e:

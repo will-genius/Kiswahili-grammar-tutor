@@ -90,7 +90,8 @@ async def chat_with_voice(file: UploadFile = File(...)):
         return {
             "status": "success",
             "transcribed_query": transcribed_text,
-            "tutor_response": response_data["tutor_response"]
+            "tutor_response": response_data["tutor_response"],
+            "retrieved_context_used": response_data.get("retrieved_context_used", [])
         }
         
     finally:
