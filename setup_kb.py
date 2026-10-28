@@ -1,48 +1,79 @@
+import os
+import re
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
-# STEP 1: Initialize the Multilingual Embedding Model
-# We use BAAI/bge-m3 because it is heavily optimized for multilingual retrieval.
-embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-m3")
+def parse_markdown_file(filepath):
+    """
+    Slices a markdown file into smaller chunks based on YAML frontmatter.
+    Returns a list of Document objects.
+    """
+    with open(filepath, 'r', encoding='utf-8') as f:
+        text = f.read()
 
-# STEP 2: Initialize the Persistent Vector Store
-# This creates a local folder to store the vectors on disk.
-vector_store = Chroma(
-    collection_name="swahili_grammar_kb",
-    embedding_function=embeddings,
-    persist_directory="./chromadb_grammar_kb" 
-)
+    # Regex to find all blocks starting with --- metadata --- followed by content
+    # It stops capturing content when it hits the next --- block or the end of the file.
+    pattern = re.compile(r'^---\s*\n(.*?)\n---\s*\n(.*?)(?=(?:^---\s*\n)|\Z)', re.MULTILINE | re.DOTALL)
+    
+    documents = []
+    
+    for match in pattern.finditer(text):
+        frontmatter = match.group(1)
+        content = match.group(2).strip()
+        
+        metadata = {}
+        # Parse the key: value pairs in the frontmatter
+        for line in frontmatter.split('\n'):
+            if ':' in line:
+                key, value = line.split(':', 1)
+                metadata[key.strip()] = value.strip().strip('"').strip("'")
+                
+        # Keep track of the source file
+        metadata['source_file'] = os.path.basename(filepath)
+        
+        sub_sections = re.split(r'\n(?=## )', content)
+        
+        for sub_section in sub_sections:
+            if sub_section.strip():
+                # Append each tiny chunk as its own document
+                documents.append(Document(page_content=sub_section.strip(), metadata=metadata.copy()))
+        
+    return documents
 
-# STEP 3: Define the Validated Knowledge Base (KB) Entries
-# The architecture requires specific metadata tags for pedagogical filtering.
-initial_rules = [
-    Document(
-        page_content="The m-/wa- noun class is used for people. Singular uses m- (mtoto), plural uses wa- (watoto).",
-        metadata={
-            "rule_id": "rule_m_wa_01",
-            "morphology_class": "m-/wa-",
-            "cbc_topic": "Noun Classes (Ngeli)",
-            "explanation_sw": "Ngeli ya m-/wa- hutumika kwa majina ya watu. Umoja ni m- na wingi ni wa-.",
-            "explanation_en": "The m-/wa- class is for people. Singular takes m-, plural takes wa-.",
-            "example_error": "Watoto anasoma",
-            "example_correction": "Watoto wanasoma"
-        }
-    ),
-    Document(
-        page_content="Present tense marker is -na-. Example: ninasoma (I am reading).",
-        metadata={
-            "rule_id": "rule_tense_na_01",
-            "morphology_class": "tense_marker",
-            "cbc_topic": "Tenses (Nyakati)",
-            "explanation_sw": "Wakati uliopo hutumia kiambishi -na-. Mfano: ninasoma.",
-            "explanation_en": "The present tense uses the marker -na-. Example: ninasoma (I am reading).",
-            "example_error": "Mimi kusoma sasa",
-            "example_correction": "Mimi ninasoma sasa"
-        }
+def main():
+    print("Loading embedding model (BAAI/bge-m3)...")
+    embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-m3")
+
+    persist_dir = "./chromadb_grammar_kb"
+    print(f"Initializing ChromaDB at {persist_dir}...")
+    vector_store = Chroma(
+        collection_name="swahili_grammar_kb",
+        embedding_function=embeddings,
+        persist_directory=persist_dir 
     )
-]
 
-# STEP 4: Add the documents to the database
-vector_store.add_documents(initial_rules)
-print(f"Successfully loaded {len(initial_rules)} rules into the persistent ChromaDB.")
+    kb_directory = os.path.join("data", "knowledge_base")
+    all_documents = []
+    
+    if not os.path.exists(kb_directory):
+        print(f"Error: Directory {kb_directory} does not exist.")
+        return
+
+    for filename in os.listdir(kb_directory):
+        if filename.endswith(".md"):
+            filepath = os.path.join(kb_directory, filename)
+            # This now returns a LIST of chunked documents per file
+            chunks = parse_markdown_file(filepath)
+            all_documents.extend(chunks)
+            print(f"Chunked {filename} into {len(chunks)} pieces.")
+
+    if all_documents:
+        print(f"Inserting {len(all_documents)} precise chunks into ChromaDB...")
+        vector_store.add_documents(all_documents)
+        print(" Knowledge Base successfully populated with chunked data!")
+    else:
+        print("No markdown files found to process.")
+
+if __name__ == "__main__":
+    main()
