@@ -3,7 +3,7 @@
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir streamlit requests audio-recorder-streamlit
+RUN pip install streamlit requests audio-recorder-streamlit
 
 COPY ui.py .
 

@@ -1,7 +1,7 @@
 import os
 import logging
 from dotenv import load_dotenv
-from google import genai
+from groq import Groq
 from app.rag_service import query_knowledge_base
 import time
 
@@ -13,15 +13,12 @@ logger = logging.getLogger(__name__)
 class TutorService:
     def __init__(self, llm_client=None):
         # Fetch the API key from environment variables (.env)
-        api_key = os.getenv("GEMINI_API_KEY")
+        api_key = os.getenv("GROQ_API_KEY")
         if not api_key:
-            logger.warning(" GEMINI_API_KEY not found in environment variables or .env file.")
-            
-        # Initialize the Gemini client safely with the loaded key
-        self.client = genai.Client(api_key=api_key) if api_key else None
-        
-        # Using Gemini Flash for fast, lightweight, and free-tier friendly responses
-        self.model_name = "gemini-3.8-flash"
+            logger.warning(" GROQ_API_KEY not found in environment variables or .env file.")
+      
+        self.client = Groq(api_key=api_key) if api_key else None
+        self.model_name = "openai/gpt-oss-20b"
 
     def generate_response(self, student_message: str, preferred_language: str = "auto") -> dict:
         """
@@ -41,7 +38,7 @@ class TutorService:
         # Extract and concatenate the text content from the retrieved chunks
         context_text = "\n\n".join([doc["content"] for doc in retrieved_docs])
         
-        # 2. Construct the bilingual pedagogical system prompt
+        # Construct the bilingual pedagogical system prompt
         system_prompt = f"""You are an encouraging and supportive bilingual educational tutor (English and Kiswahili) for students using low-spec edge devices. 
 Your task is to answer the student's question or explain the concept using ONLY the provided curriculum context below. 
 
@@ -53,15 +50,16 @@ Curriculum Context (Retrieved Knowledge):
 Student Message: {student_message}
 """
 
-        # 3. Generate response via Gemini API
+        # Generate response via Groq API
         try:
-            response = self.client.models.generate_content(
+            chat_completion = self.client.chat.completions.create(
                 model=self.model_name,
-                contents=system_prompt,
+                messages=[{"role": "user", "content": system_prompt}],
+                temperature=0.3, # Lower temperature for precise curriculum adherence
             )
-            tutor_reply = response.text
+            tutor_reply = chat_completion.choices[0].message.content
         except Exception as e:
-            logger.error(f"Gemini API call failed: {e}")
+            logger.error(f"Groq API call failed: {e}")
             tutor_reply = f"Samahani, kumesitawi tatizo la kiufundi: {str(e)}"
             
         return {
@@ -72,10 +70,10 @@ Student Message: {student_message}
         }
     def generate_response_stream(self, student_message: str, preferred_language: str = "auto"):
         """
-        Streams the Gemini response token-by-token for lightning-fast UI rendering.
+        Streams the Groq API response token-by-token for lightning-fast UI rendering.
         """
         if not self.client:
-            yield "Samahani, ufunguo wa Gemini API haupatikani kwenye faili la .env."
+            yield "Samahani, ufunguo wa Groq API haupatikani kwenye faili la .env."
             return
 
         # Retrieve the top 2 precise micro-chunks 
@@ -94,15 +92,36 @@ Curriculum Context (Retrieved Knowledge):
 Student Message: {student_message}
 """
 
-        #  Stream response chunks via Gemini API
+        #  Stream response chunks via Groq API
         try:
-            response_stream = self.client.models.generate_content_stream(
+            stream = self.client.chat.completions.create(
                 model=self.model_name,
-                contents=system_prompt,
+                messages=[{"role": "user", "content": system_prompt}],
+                stream=True,
             )
-            for chunk in response_stream:
-                if chunk.text:
-                    yield chunk.text
+            for chunk in stream:
+                content = chunk.choices[0].delta.content
+                if content:
+                    yield content
         except Exception as e:
-            logger.error(f"Gemini streaming failed: {e}")
+            logger.error(f"Groq streaming failed: {e}")
             yield f"Samahani, kumesitawi tatizo la kiufundi: {str(e)}"
+
+    def transcribe_audio(self, audio_file_path: str) -> str:
+        """
+        Transcribes recorded student audio using Groq's whisper-large-v3-turbo model.
+        """
+        if not self.client:
+            return "Samahani, Groq client haipatikani."
+            
+        try:
+            with open(audio_file_path, "rb") as file:
+                transcription = self.client.audio.transcriptions.create(
+                    file=(audio_file_path, file.read()),
+                    model="whisper-large-v3-turbo",
+                    prompt="Swahili and English educational context" # Guides whisper for bilingual code-switching
+                )
+            return transcription.text
+        except Exception as e:
+            logger.error(f"Whisper transcription failed: {e}")
+            return f"Error in transcription: {str(e)}"
