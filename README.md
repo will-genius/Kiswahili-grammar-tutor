@@ -31,17 +31,13 @@ docker compose up --build
 ## Example Usage
 To demonstrate the bot, you can test these sample prompts or workflows:
 
-* **Text Query (English)**:
-
-* **Sample Input**: "Can you explain the key pillars of the CBC curriculum?"
-
-* **Expected Output**: A structured response grounded in retrieved curriculum documents with source expanders.
-
-* **Text Query (Kiswahili)**:
-
-* **Sample Input**: "Nieleze kuhusu misingi ya mtaala wa umahiri."
-
-* **Expected Output**: Fluent educational guidance in Swahili.
+* **Text Query** : 
+    Ufahamu ni nini?
+    Taja hatua zinazofuatiliwa katika kufahamu.
+    Andika udogo na ukubwa wa majina haya: Mbwa, Wanawake, Kiti, Nyoka, Ng'ombe.
+    kiambishi ni nini
+    more sample questions in the exercises.json file containing all the exercises that 
+    were in the book used to build the kb
 
 * **Voice Input Flow**:
 
